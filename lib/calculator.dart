@@ -20,16 +20,14 @@ class _CalCulatorState extends State<CalCulator> {
   Widget build(BuildContext context) {
     void navigateToResultScreen() {
       CalculateResult obj = CalculateResult(height: height, weight: weight);
-      String message = obj.getMessage();
       String result = obj.getResult();
+      String message = obj.getMessage();
 
       Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => ResultScreen(
-                    message: message,
-                    result: result,
-                  )));
+              builder: (context) =>
+                  ResultScreen(result: result, message: message)));
     }
 
     return Scaffold(

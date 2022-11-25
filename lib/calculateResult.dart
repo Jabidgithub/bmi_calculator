@@ -18,10 +18,11 @@ class CalculateResult {
 
   String getMessage() {
     if (result < 18.5) {
-      message = "Underweight";
+      print("result is $result");
+      message = "Under weight";
       return message;
     } else if (result > 18.5 && result < 25) {
-      message = "Normal";
+      message = "right weight";
       return message;
     } else if (result > 25) {
       message = "Overweight";
